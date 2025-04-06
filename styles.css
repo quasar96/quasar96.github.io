@@ -1,0 +1,58 @@
+/* Базовые стили для мобильных */
+body {
+    font-size: 16px;
+    padding: 10px;
+}
+
+.container {
+    max-width: 100%;
+    padding: 15px;
+}
+
+h1 {
+    font-size: 24px; /* Уменьшаем заголовок */
+}
+
+button {
+    padding: 12px 24px;
+    font-size: 18px; /* Увеличиваем кнопку */
+}
+
+/* Медиа-запросы для разных экранов */
+@media (min-width: 768px) {
+    body {
+        font-size: 18px;
+    }
+    h1 {
+        font-size: 32px;
+    }
+}
+h1 {
+    font-size: 2rem; /* 1rem = 16px по умолчанию */
+    margin-bottom: 1.5rem;
+}
+
+button {
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+}
+
+button {
+    min-width: 120px; /* Минимальный размер для пальцев */
+    min-height: 44px; /* Рекомендуемый размер кликабельных элементов */
+}
+
+/* Запрет выделения текста при тапе */
+* {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+/* Улучшение для iOS */
+@supports (-webkit-touch-callout: none) {
+    body {
+        padding: env(safe-area-inset-top) env(safe-area-inset-right) 
+                env(safe-area-inset-bottom) env(safe-area-inset-left);
+    }
+}
