@@ -1,70 +1,44 @@
-/* Базовые стили */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    margin: 0;
-    padding: 20px;
+/* Стили вкладок */
+.tabs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-h1 {
-    text-align: center;
-    color: #333;
-    margin-bottom: 30px;
-    font-size: 2.5rem;
-}
-
-/* Сетка ссылок */
-.links-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 20px;
-    padding: 10px;
-}
-
-/* Карточки ссылок */
-.link-card {
-    background: white;
-    border-radius: 10px;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
+.tab-button {
+    padding: 10px 20px;
+    background: #e0e0e0;
+    border: none;
+    border-radius: 20px;
     cursor: pointer;
-}
-
-.link-card:hover {
-    transform: translateY(-5px);
-}
-
-.link-card img {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 10px;
-}
-
-.link-card span {
-    display: block;
     font-weight: bold;
-    color: #333;
-    font-size: 1.1rem;
+    transition: all 0.3s;
 }
 
-/* Адаптация для мобильных */
+.tab-button:hover {
+    background: #d0d0d0;
+}
+
+.tab-button.active {
+    background: #4CAF50;
+    color: white;
+}
+
+/* Адаптация карточек под фильтрацию */
+.link-card {
+    display: block; /* По умолчанию все карточки видны */
+}
+
 @media (max-width: 600px) {
-    .links-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .tabs {
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding-bottom: 10px;
     }
     
-    h1 {
-        font-size: 2rem;
-    }
-    
-    .link-card {
-        padding: 15px;
+    .tab-button {
+        flex-shrink: 0;
     }
 }

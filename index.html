@@ -3,28 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Полезные ссылки</title>
+    <title>Полезные ссылки с категориями</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <h1>Мои полезные ссылки</h1>
         
+        <!-- Вкладки -->
+        <div class="tabs">
+            <button class="tab-button active" data-category="all">Все</button>
+            <button class="tab-button" data-category="search">Поиск</button>
+            <button class="tab-button" data-category="dev">Разработка</button>
+            <button class="tab-button" data-category="social">Соцсети</button>
+        </div>
+        
+        <!-- Контент вкладок -->
         <div class="links-grid">
-            
-            <div class="link-card" onclick="window.open('https://google.com', '_blank')">
+            <!-- Карточка 1 -->
+            <div class="link-card" data-category="search">
+                <img src="https://www.google.com/favicon.ico" alt="Google">
                 <span>Google</span>
             </div>
             
-            
-            <div class="link-card" onclick="window.open('https://chat.deepseek.com/', '_blank')">
-                <span>DeepSeek</span>
+            <!-- Карточка 2 -->
+            <div class="link-card" data-category="dev">
+                <img src="https://github.com/favicon.ico" alt="GitHub">
+                <span>GitHub</span>
             </div>
             
-            <div class="link-card" onclick="window.open('https://chttps://github.com/quasar96', '_blank')">
-                <span>Github</span>
+            <!-- Карточка 3 -->
+            <div class="link-card" data-category="social">
+                <img src="https://vk.com/favicon.ico" alt="VK">
+                <span>VK</span>
             </div>
             
+            <!-- Добавьте больше карточек по аналогии -->
         </div>
     </div>
     
