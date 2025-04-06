@@ -1,3 +1,4 @@
-document.getElementById("myButton").addEventListener("click", function() {
-    alert("Кнопка нажата!");
+// Можно добавить позже, если нужно
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('Сайт загружен!');
 });

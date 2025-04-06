@@ -1,18 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-    <link rel="stylesheet" href="styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Полезные ссылки</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <p>Привет</p>
-    <button id="myButton">Нажми меня</button>
+    <div class="container">
+        <h1>Мои полезные ссылки</h1>
+        
+        <div class="links-grid">
+            <!-- Секция 1 -->
+            <div class="link-card" onclick="window.open('https://google.com', '_blank')">
+                <img src="https://www.google.com/favicon.ico" alt="Google">
+                <span>Google</span>
+            </div>
+            
+            <!-- Секция 2 -->
+            <div class="link-card" onclick="window.open('https://youtube.com', '_blank')">
+                <img src="https://www.youtube.com/favicon.ico" alt="YouTube">
+                <span>YouTube</span>
+            </div>
+            
+            <!-- Добавьте больше карточек по аналогии -->
+        </div>
+    </div>
+    
     <script src="script.js"></script>
 </body>
-
 </html>

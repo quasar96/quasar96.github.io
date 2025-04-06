@@ -1,58 +1,70 @@
-/* Базовые стили для мобильных */
+/* Базовые стили */
 body {
-    font-size: 16px;
-    padding: 10px;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 20px;
 }
 
 .container {
-    max-width: 100%;
-    padding: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 h1 {
-    font-size: 24px; /* Уменьшаем заголовок */
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
 }
 
-button {
-    padding: 12px 24px;
-    font-size: 18px; /* Увеличиваем кнопку */
+/* Сетка ссылок */
+.links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+    padding: 10px;
 }
 
-/* Медиа-запросы для разных экранов */
-@media (min-width: 768px) {
-    body {
-        font-size: 18px;
+/* Карточки ссылок */
+.link-card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.link-card:hover {
+    transform: translateY(-5px);
+}
+
+.link-card img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.link-card span {
+    display: block;
+    font-weight: bold;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 600px) {
+    .links-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
+    
     h1 {
-        font-size: 32px;
+        font-size: 2rem;
     }
-}
-h1 {
-    font-size: 2rem; /* 1rem = 16px по умолчанию */
-    margin-bottom: 1.5rem;
-}
-
-button {
-    font-size: 1.2rem;
-    padding: 1rem 2rem;
-}
-
-button {
-    min-width: 120px; /* Минимальный размер для пальцев */
-    min-height: 44px; /* Рекомендуемый размер кликабельных элементов */
-}
-
-/* Запрет выделения текста при тапе */
-* {
-    -webkit-tap-highlight-color: transparent;
-    -webkit-user-select: none;
-    user-select: none;
-}
-
-/* Улучшение для iOS */
-@supports (-webkit-touch-callout: none) {
-    body {
-        padding: env(safe-area-inset-top) env(safe-area-inset-right) 
-                env(safe-area-inset-bottom) env(safe-area-inset-left);
+    
+    .link-card {
+        padding: 15px;
     }
 }
