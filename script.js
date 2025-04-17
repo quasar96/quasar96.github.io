@@ -23,10 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     
     // Открытие ссылки при клике на карточку
-    // Открытие ссылок при клике
-document.addEventListener('DOMContentLoaded', () => {
-    const cards = document.querySelectorAll('.link-card');
-    
+    // Открытие ссылок при клике    
     cards.forEach(card => {
         card.style.cursor = 'pointer'; // Меняем курсор
         card.addEventListener('click', () => {
@@ -38,4 +35,4 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
-});
+
