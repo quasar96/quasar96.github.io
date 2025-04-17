@@ -23,10 +23,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     
     // Открытие ссылки при клике на карточку
-    document.querySelectorAll('.link-card').forEach(card => {
-        card.addEventListener('click', function() {
-            const url = this.getAttribute('data-url');
-            if (url) window.open(url, '_blank');
+    // Открытие ссылок при клике
+document.addEventListener('DOMContentLoaded', () => {
+    const cards = document.querySelectorAll('.link-card');
+    
+    cards.forEach(card => {
+        card.style.cursor = 'pointer'; // Меняем курсор
+        card.addEventListener('click', () => {
+            const url = card.getAttribute('data-url');
+            if (url) {
+                window.open(url, '_blank'); 
+                // Или для текущей вкладки: window.location.href = url;
+            }
         });
     });
+});
 });
