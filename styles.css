@@ -29,13 +29,21 @@
 /* Адаптация карточек под фильтрацию */
 .link-card {
     display: block; /* По умолчанию все карточки видны */
+    background-color: #59cff3;
+    margin: 10px;
+    margin-right: 70%;
+    border-radius: 10px;
+    span {
+        padding-bottom: 20px;
+    }
 }
+
 
 @media (max-width: 600px) {
     .tabs {
         justify-content: flex-start;
         overflow-x: auto;
-        padding-bottom: 10px;
+        padding-bottom: 10px;        
     }
     
     .tab-button {

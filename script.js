@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
     cards.forEach(card => {
         card.style.cursor = 'pointer'; // Меняем курсор
         card.addEventListener('click', () => {
-            const url = card.getAttribute('data-url');
+            const url = card.getAttribute('data_URL');
             if (url) {
                 window.open(url, '_blank'); 
                 // Или для текущей вкладки: window.location.href = url;
