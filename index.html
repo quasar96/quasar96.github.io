@@ -3,67 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Полезные ссылки с категориями</title>
+    <title>Тестовый сайт</title>
     <link rel="stylesheet" href="styles.css">
-    
 </head>
 <body>
     <div class="container">
-        <h1>Мои полезные ссылки</h1>
-        
-        <!-- Вкладки -->
         <div class="tabs">
-            <button class="tab-button active" data-category="all">Все</button>
-            <button class="tab-button" data-category="search">Поиск</button>
-            <button class="tab-button" data-category="dev">Разработка</button>
-            <button class="tab-button" data-category="social">Соцсети</button>
-            <button class="tab-button" data-category="personal">Личные</button>
+            <div class="tab active" data-tab="navigation">Навигация</div>
+            <div class="tab" data-tab="links">Полезные ссылки</div>
+            <!-- Новые вкладки будут добавляться здесь -->
         </div>
         
-        <!-- Контент вкладок -->
-        <div class="links-grid">
-            <!-- Карточка 1 -->
-            <div class="link-card" data-category="search" data_URL="https://www.google.com">
-                <img src="https://www.google.com/favicon.ico" alt="Google">
-                <span>Google</span>
+        <!-- Вкладка навигации -->
+        <div class="tab-content active" id="navigation">
+            <h2>Навигация по сайту</h2>
+            <div class="nav-menu">
+                <div class="nav-item">
+                    <a href="#home">Главная</a>
+                </div>
+                <div class="nav-item">
+                    <a href="#about">О проекте</a>
+                </div>
+                <div class="nav-item">
+                    <a href="#contact">Контакты</a>
+                </div>
+                <!-- Дополнительные пункты меню можно добавлять здесь -->
             </div>
-            
-            <!-- Карточка 2 -->
-            <div class="link-card" data-category="dev" data_URL="https://github.com">
-                <img src="https://github.com/favicon.ico" alt="GitHub">
-                <span>GitHub</span>
-            </div>
-            
-            <!-- Карточка 3 -->
-            <div class="link-card" data-category="social" data_URL="https://vk.com">
-                <img src="https://vk.com/favicon.ico" alt="VK" width="32" height="32">
-                <span>VK</span>
-            </div>
-
-            <div class="link-card" data-category="personal" data_URL="https://github.com/quasar96/quasar96.github.io">
-                <img src="https://github.com/favicon.ico" alt="Git" width="32" height="32">
-                <span>Этот сайт</span>
-            </div>
-
-            <div class="link-card" data-category="dev" data_URL="https://www.cursor.com">
-                <img src="https://www.cursor.com/favicon.ico" alt="Cursor" width="32" height="32">
-                <span>Курсор</span>
-            </div>
-
-            <div class="link-card" data-category="personal" data_URL="https://chat.deepseek.com">
-                <img src="https://deepseek.com/favicon.ico" alt="Deepseek" width="32" height="32">
-                <span>Deepseek нейросеть</span>
-            </div>
-
-            <div class="link-card" data-category="personal" data_URL="https://github.com/codecrafters-io/build-your-own-x">
-                <img src="https://github.com/favicon.ico" alt="Git" width="32" height="32">
-                <span>код крафтерс</span>
-            </div>
-            
-            <!-- Добавьте больше карточек по аналогии -->
         </div>
+        
+        <!-- Вкладка полезных ссылок -->
+        <div class="tab-content" id="links">
+            <h2>Полезные ссылки</h2>
+            
+            <div class="add-link-form">
+                <h3>Добавить новую ссылку</h3>
+                <div class="form-group">
+                    <label for="link-title">Название:</label>
+                    <input type="text" id="link-title" placeholder="Введите название">
+                </div>
+                <div class="form-group">
+                    <label for="link-url">URL:</label>
+                    <input type="url" id="link-url" placeholder="https://example.com">
+                </div>
+                <div class="form-group">
+                    <label for="link-description">Описание:</label>
+                    <textarea id="link-description" placeholder="Краткое описание ссылки"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="link-tags">Теги (через запятую):</label>
+                    <input type="text" id="link-tags" placeholder="javascript, web, design">
+                </div>
+                <button id="add-link-btn">Добавить ссылку</button>
+            </div>
+            
+            <div class="filters" id="tags-filter">
+                <div class="filter-tag active" data-tag="all">Все</div>
+                <!-- Теги будут добавляться здесь динамически -->
+            </div>
+            
+            <div class="links-container" id="links-list">
+                <!-- Ссылки будут добавляться здесь динамически -->
+            </div>
+        </div>
+        
+        <!-- Здесь будут появляться новые вкладки -->
     </div>
-    
+
     <script src="script.js"></script>
 </body>
 </html>
