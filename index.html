@@ -3,72 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Тестовый сайт</title>
+    <title>Мой тестовый сайт</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <div class="tabs">
-            <div class="tab active" data-tab="navigation">Навигация</div>
-            <div class="tab" data-tab="links">Полезные ссылки</div>
-            <!-- Новые вкладки будут добавляться здесь -->
-        </div>
-        
-        <!-- Вкладка навигации -->
-        <div class="tab-content active" id="navigation">
-            <h2>Навигация по сайту</h2>
-            <div class="nav-menu">
-                <div class="nav-item">
-                    <a href="#home">Главная</a>
-                </div>
-                <div class="nav-item">
-                    <a href="#about">О проекте</a>
-                </div>
-                <div class="nav-item">
-                    <a href="#contact">Контакты</a>
-                </div>
-                <!-- Дополнительные пункты меню можно добавлять здесь -->
-            </div>
-        </div>
-        
-        <!-- Вкладка полезных ссылок -->
-        <div class="tab-content" id="links">
-            <h2>Полезные ссылки</h2>
+    <header>
+        <h1>Тестовый сайт</h1>
+        <nav>
             
-            <div class="add-link-form">
-                <h3>Добавить новую ссылку</h3>
-                <div class="form-group">
-                    <label for="link-title">Название:</label>
-                    <input type="text" id="link-title" placeholder="Введите название">
-                </div>
-                <div class="form-group">
-                    <label for="link-url">URL:</label>
-                    <input type="url" id="link-url" placeholder="https://example.com">
-                </div>
-                <div class="form-group">
-                    <label for="link-description">Описание:</label>
-                    <textarea id="link-description" placeholder="Краткое описание ссылки"></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="link-tags">Теги (через запятую):</label>
-                    <input type="text" id="link-tags" placeholder="javascript, web, design">
-                </div>
-                <button id="add-link-btn">Добавить ссылку</button>
-            </div>
-            
-            <div class="filters" id="tags-filter">
-                <div class="filter-tag active" data-tag="all">Все</div>
-                <!-- Теги будут добавляться здесь динамически -->
-            </div>
-            
-            <div class="links-container" id="links-list">
-                <!-- Ссылки будут добавляться здесь динамически -->
-            </div>
-        </div>
-        
-        <!-- Здесь будут появляться новые вкладки -->
-    </div>
+        </nav>
+    </header>
 
+    <details>
+        <summary>Some details</summary>
+    </details>
     <script src="script.js"></script>
 </body>
 </html>
