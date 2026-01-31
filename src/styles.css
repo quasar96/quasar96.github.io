@@ -1,22 +1,24 @@
-:root {
-            --primary-color: #2c3e50;
-            --secondary-color: #34495e;
-            --accent-color: #3498db;
-            --text-color: #ecf0f1;
-            --light-text: #bdc3c7;
-        }
         
 body {
-    background-color: #f7c1c1;
-    color: rgb(0, 0, 0);
+    background-color: #1E1E1E;
+    color: #EEEEEE;
     font-family: Verdana;
 }
 
-header {
-    
+.nav {
+    background-color: #26353E;
+    color: #EEEEEE;
     border-radius: 5px;
-    padding: 10px;
-    margin: 10px;
+}
+
+#print {
+    display: none;
+}
+
+a {
+    background-color: #26353E;
+    color: #EEEEEE;
+    text-decoration: none;
 }
 
 h1 {
@@ -32,8 +34,38 @@ nav {
 }
 
 main {
-    
+    background-color: #26353E;
     border-radius: 5px;
     padding: 10px;
     margin: 10px;
 }
+
+header {
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+}
+
+
+
+
+
+
+
+
+@media print {
+
+    html, body {
+        height: 297;
+        width: 210;
+    }
+
+    #print{
+        display: none;
+    }
+}
+
+@page{
+    margin: 10mm 10mm 10mm 20mm;
+}
+
